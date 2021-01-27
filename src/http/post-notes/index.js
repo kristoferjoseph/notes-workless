@@ -11,10 +11,10 @@ async function notes(req) {
   let note = arc.http.helpers.bodyParser(req)
 
   if (note.created) {
-    note.updated = Date.now()
+    note.updated = new Date().toISOString()
   }
   else {
-    note.created = Date.now()
+    note.created = new Date().toISOString()
   }
   // sanitize against xss attack
   note.title = sanitize(note.title)
