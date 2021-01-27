@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@architect/functions": "^3.13.9",
+    "@begin/data": "^1.2.3"
+  }
+}

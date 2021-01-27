@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@architect/functions": "^3.13.9",
+    "esm": "^3.2.25"
+  }
+}
