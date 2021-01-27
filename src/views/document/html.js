@@ -1,11 +1,14 @@
 import Styles from './styles.js'
+import StyleSheet from './stylesheet.js'
 
 export default function HTML(state={}) {
   let {
     children='',
     scripts='',
-    title=''
+    title='',
+    stylesheets=[]
   } = state
+  let sheets = stylesheets.map(sheet => StyleSheet({ sheet })).join('')
   return `
 <!DOCTYPE html>
 <html
@@ -15,15 +18,7 @@ export default function HTML(state={}) {
 <head>
   <meta charset="UTF-8">
   <title>${ title }</title>
-  <link
-    rel="preload"
-    href="/_static/syntax.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link rel="stylesheet" href="/_static/syntax.css">
-  </noscript>
+  ${ sheets }
   ${ Styles() }
 </head>
 <body

@@ -62,7 +62,6 @@ async function note(req) {
         'content-type': 'text/html; charset=utf8'
       },
       body: HTML({
-        title: 'Notes Demo',
         children: Note({
           account: {
             avatar: account.avatar,
@@ -70,8 +69,12 @@ async function note(req) {
             url: `https://github.com/${account.login}`
           },
           cursor: note,
-          notes
-        })
+          notes,
+        }),
+        stylesheets: [
+          arc.static('syntax.css')
+        ],
+        title: 'Notes Demo'
       })
     }
   }
