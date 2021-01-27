@@ -13,7 +13,7 @@
     "esm": "^3.2.25",
     "highlight.js": "^10.5.0",
     "markdown-it": "^12.0.4",
-    "no-save": "^1.0.0",
-    "tiny-json-http": "^7.3.0"
+    "tiny-json-http": "^7.3.0",
+    "xss": "^1.0.8"
   }
 }
