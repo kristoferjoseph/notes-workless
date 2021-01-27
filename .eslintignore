@@ -1,0 +1,5 @@
+architect-parser-2*
+_app
+*.json
+**/starter-app
+arc-proxy-*

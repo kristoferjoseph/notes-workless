@@ -1,0 +1,35 @@
+export default function Logout() {
+  return `
+<form
+  action=/logout
+  class="
+    flex
+    items-center
+    mr0
+  "
+  method=POST
+>
+  <button
+    class="
+      pt-3
+      pr-2
+      pb-3
+      pl-2
+      text-1
+      text-g0
+      font-semibold
+      border-solid
+      border1
+      border-g8
+      border-h0
+      border-a2
+      radius0
+      bg-g9
+      cursor-pointer
+    "
+  >
+    Logout
+  </button>
+</form>
+  `
+}

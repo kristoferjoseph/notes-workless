@@ -5,7 +5,15 @@
   "scripts": {
     "start": "npx sandbox"
   },
-  "devDependencies": {
-    "@architect/sandbox": "^3.3"
+  "dependencies": {
+    "@architect/functions": "^3.13.9",
+    "@architect/sandbox": "^3.3.5",
+    "@begin/data": "^1.2.3",
+    "@toycode/markdown-it-class": "^1.2.4",
+    "esm": "^3.2.25",
+    "highlight.js": "^10.5.0",
+    "markdown-it": "^12.0.4",
+    "no-save": "^1.0.0",
+    "tiny-json-http": "^7.3.0"
   }
 }
