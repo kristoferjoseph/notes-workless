@@ -1,17 +1,14 @@
 export default function NoteForm(state={}) {
-  let { classes='', cursor={}, show=false } = state
+  let { classes='', cursor={} } = state
   let { key='', title='', text='' } = cursor
-  classes = show
-    ? classes
-    : `${ classes } hidden`
   return `
 <form
   method=POST
   action=/notes
   class="
-    flex
-    flex-col
-    ${ classes }
+   flex
+   flex-col
+   ${ classes }
   "
 >
   <input

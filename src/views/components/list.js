@@ -51,44 +51,46 @@ export default function List(state={ notes: [] }) {
   return `
 <div
  class="
-  relative
   h-full
+  flex
+  flex-col
  "
 >
   <ul
     class="
       list-none
+      flex-grow
     "
   >
     ${ items }
   </ul>
-  <a
-    class="
-     absolute
-     flex
-     items-center
-     justify-center
-     pr0
-     pl0
-     bottom0
-     right0
-     text3
-     text-g9
-     font-semibold
-     border-solid
-     border1
-     border-g10
-     border-h0
-     border-a2
-     radius-100
-     bg-p0
-     cursor-pointer
-     no-underline
-    "
-    href="/notes"
-  >
-    +
-  </a>
+  <div>
+    <a
+      class="
+       text-center
+       block
+       pt-1
+       pr2
+       pb-1
+       pl2
+       text0
+       text-g9
+       font-bold
+       border-solid
+       border1
+       border-g8
+       border-h0
+       border-a2
+       radius0
+       bg-p0
+       cursor-pointer
+       no-underline
+      "
+      href="/notes"
+    >
+      Add note
+    </a>
+  </div>
 </div>
     `
 }

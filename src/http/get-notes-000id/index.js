@@ -19,12 +19,14 @@ async function note(req) {
   let accountId = account.id
   let pathParameters = req.pathParameters || {}
   let noteId = pathParameters.id
+  let edit = req.query &&
+    req.query.edit === 'true'
 
   if (accountId) {
     let table = `notes-${accountId}`
     let pages = await data.get({
       table,
-      limit: 25
+      limit: 2
     })
 
     let notes = []
@@ -74,6 +76,7 @@ async function note(req) {
             url: `https://github.com/${account.login}`
           },
           cursor: note,
+          edit,
           notes,
         }),
         stylesheets: [
