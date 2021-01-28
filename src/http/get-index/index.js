@@ -27,7 +27,6 @@ async function index(req) {
         'content-type': 'text/html; charset=utf8'
       },
       body: HTML({
-        static,
         title: 'Notes Demo',
         children: Login({
           href
