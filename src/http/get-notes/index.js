@@ -23,7 +23,11 @@ async function notes(req) {
       notes.push(note)
     }
     // Return oldest notes first
-    notes.sort((a, b) => a.created > b.created)
+    notes.sort((a, b) => {
+      if (a.created < b.created) return -1
+      if (a.created > b.created) return 1
+      return 0
+    })
 
     return {
       statusCode: 200,
