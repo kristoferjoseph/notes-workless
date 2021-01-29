@@ -26,7 +26,7 @@ async function note(req) {
     let table = `notes-${accountId}`
     let pages = await data.get({
       table,
-      limit: 2
+      limit: 25
     })
 
     let notes = []

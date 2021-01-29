@@ -56,6 +56,7 @@ export default function Notes(state={}) {
         border-a2
         radius-pill
         bg-p0
+        bg-a2
         cursor-pointer
         no-underline
       "
