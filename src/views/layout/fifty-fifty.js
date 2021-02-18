@@ -6,8 +6,7 @@ export default function TwoColumn(state={}) {
   class="
     h-full
     grid-lg
-    two-column
-    three-row
+    two-row
   "
 >
   <header
@@ -25,7 +24,7 @@ export default function TwoColumn(state={}) {
     class="
       overflow-auto
       col-start-1
-      col-end-1
+      col-end-2
    "
   >
     ${ aside }

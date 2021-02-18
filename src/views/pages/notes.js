@@ -36,13 +36,13 @@ TwoColumn({
   }),
   aside: list,
   main: `
-  <div
+<div
    class="
     w-full
     h-full
     p1
   "
-  >
+>
   ${NoteForm()}
 </div>
 `

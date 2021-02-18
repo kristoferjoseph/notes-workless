@@ -13,15 +13,18 @@ html {
   scroll-behavior: smooth;
 }
 
-.min-h-header {
-  min-height: 3.5rem;
+.two-row {
+  grid-template-rows: 0.1fr 1fr;
 }
 
 .two-column {
-  /* Height: Header | Content */
-  grid-template-rows: 3.5rem 1fr;
   /* Width: Sidebar | Content */
-  grid-template-columns: 17.666rem 1fr;
+  grid-template-columns: 20rem 1fr;
+}
+
+.three-row {
+  /* Height: Header | Content | Footer */
+  grid-template-rows: 0.1fr 1fr auto;
 }
 
 .logo {

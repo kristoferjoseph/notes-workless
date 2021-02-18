@@ -1,5 +1,5 @@
 export default function NoteForm(state={}) {
-  let { classes='', cursor={}, legend='Create note' } = state
+  let { classes='', cursor={}, edit=false, legend='Create note' } = state
   let { key='', title='', text='' } = cursor
   return `
 <form
@@ -83,6 +83,31 @@ export default function NoteForm(state={}) {
         justify-end
       "
     >
+      <a
+        href="?edit=${!edit}"
+        class="
+          block
+          mr-1
+          pt-1
+          pr2
+          pb-1
+          pl2
+          text0
+          text-g9
+          font-bold
+          border-solid
+          border1
+          border-g8
+          border-h0
+          border-a2
+          radius0
+          bg-p0
+          cursor-pointer
+        "
+        target=_self
+      >
+        Cancel
+      </a>
       <button
         class="
           block

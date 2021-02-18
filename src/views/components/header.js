@@ -9,20 +9,15 @@ export default function Header(state={}) {
     } = state
 
     return `
-<header
+<div
   class="
-    sticky
-    relative-lg
+    h-full
     flex
     items-center
     justify-between
-    min-h-header
-    top0
     pr2
     pl2
     bg-g9
-    col-start-1
-    col-end-3
     text-g0
   "
 >
@@ -60,6 +55,6 @@ export default function Header(state={}) {
        >
     </a>
   </div>
-</header>
+</div>
     `
 }

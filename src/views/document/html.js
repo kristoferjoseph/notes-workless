@@ -13,7 +13,10 @@ export default function HTML(state={}) {
 <!DOCTYPE html>
 <html
   lang="en"
-  class="h-full"
+  class="
+    h-full
+    overflow-hidden
+  "
 >
 <head>
   <meta charset="UTF-8">
@@ -27,7 +30,7 @@ export default function HTML(state={}) {
     font-sans
     bg-g10
     text-g0
-    overflow-hidden
+    overflow-auto
   "
 >
   ${ children }
