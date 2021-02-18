@@ -50,7 +50,7 @@ export default function Notes(state={}) {
        border1
        border-g8
        border-h0
-       border-a2
+       border-a1
        radius0
        bg-p0
        cursor-pointer
@@ -72,7 +72,9 @@ export default function Notes(state={}) {
     return `
 <div
   class="
-    container-lg
+    h-full
+    flex
+    flex-col
     m-auto
     p1
   "
@@ -114,13 +116,13 @@ export default function Notes(state={}) {
       "
       target=_self
     >
-      ${ edit ? 'Close' : 'Edit' }
+      ${ edit ? 'Cancel' : 'Edit' }
     </a>
   </div>
   <div
     class="
-      h-full
       flex
+      flex-grow
       justify-between
     "
   >
@@ -130,18 +132,10 @@ export default function Notes(state={}) {
         w-full
       "
     >
-    ${
-      edit
-        ? NoteForm({
-            classes: 'mr3',
-            cursor,
-            legend: 'Update note'
-          })
-        : ''
-    }
       <div
         class="
          w-full
+         p1
         "
       >
         <h1
@@ -155,6 +149,14 @@ export default function Notes(state={}) {
           ${ preview }
         </p>
       </div>
+      ${
+        edit
+          ? NoteForm({
+              cursor,
+              legend: 'Update note'
+            })
+          : ''
+      }
     </div>
   </div>
 </div>

@@ -6,11 +6,14 @@ export default function NoteForm(state={}) {
   method=POST
   action=/notes
   class="
+    w-full
+    h-full
     flex
   "
 >
 <fieldset
   class="
+    w-full
     flex
     flex-col
     pt1
