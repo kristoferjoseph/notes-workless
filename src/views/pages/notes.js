@@ -13,18 +13,33 @@ export default function Notes(state={}) {
   } = account
 
   let list = notes.length
-    ? List(state)
-    : Empty()
+    ? `
+<div
+ class="
+  flex
+  flex-col
+  p1
+ "
+>
+ ${List(state)}
+</div>
+  `
+   : Empty()
 
   return `
-${ TwoColumn({
+${
+TwoColumn({
   header: Header({
     avatar,
     name,
     url
   }),
   aside: list,
-  main: NoteForm()
+  main: `
+<div class="p1">
+  ${NoteForm()}
+</div>
+`
 })
 }
   `

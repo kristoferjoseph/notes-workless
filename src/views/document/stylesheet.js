@@ -8,6 +8,7 @@ export default function StyleSheet(state={}) {
   onload="this.onload=null;this.rel='stylesheet'"
 >
 <noscript>
+  <link rel="preload" href="${ sheet }" as="style">
   <link rel="stylesheet" href="${ sheet }">
 </noscript>
   `

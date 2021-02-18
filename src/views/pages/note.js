@@ -14,7 +14,56 @@ export default function Notes(state={}) {
   } = account
 
   let list = notes.length
-    ? List(state)
+    ? `
+<div
+ class="
+  flex
+  flex-col
+  pr1
+  pb1
+  pl1
+ "
+>
+  <div
+    class="
+      sticky
+      top0
+      right0
+      left0
+      pt1
+      bg-g10
+    "
+  >
+    <a
+      class="
+       text-center
+       block
+       mb2
+       pt-1
+       pr2
+       pb-1
+       pl2
+       text0
+       text-g9
+       font-bold
+       border-solid
+       border1
+       border-g8
+       border-h0
+       border-a2
+       radius0
+       bg-p0
+       cursor-pointer
+       no-underline
+      "
+      href="/notes"
+    >
+      Add note
+    </a>
+  </div>
+  ${List(state)}
+</div>
+`
     : Empty()
 
   function Content(state={}) {
@@ -25,6 +74,7 @@ export default function Notes(state={}) {
   class="
     container-lg
     m-auto
+    p1
   "
 >
   <div
@@ -41,6 +91,8 @@ export default function Notes(state={}) {
     <a
       href="?edit=${!edit}"
       class="
+        absolute
+        right1
         pt-2
         pr0
         pb-2
@@ -62,7 +114,7 @@ export default function Notes(state={}) {
       "
       target=_self
     >
-      Edit
+      ${ edit ? 'Close' : 'Edit' }
     </a>
   </div>
   <div
@@ -75,10 +127,22 @@ export default function Notes(state={}) {
     <div
       class="
         flex
+        w-full
       "
     >
-    ${ edit ? NoteForm({ classes: 'mr3', cursor }) : '' }
+    ${
+      edit
+        ? NoteForm({
+            classes: 'mr3',
+            cursor,
+            legend: 'Update note'
+          })
+        : ''
+    }
       <div
+        class="
+         w-full
+        "
       >
         <h1
           class="
@@ -87,8 +151,7 @@ export default function Notes(state={}) {
         >
           ${ title }
         </h1>
-        <p
-        >
+        <p>
           ${ preview }
         </p>
       </div>

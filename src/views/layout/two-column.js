@@ -4,24 +4,25 @@ export default function TwoColumn(state={}) {
   return `
 <div
   class="
-    h-full-lg
+    h-full
     grid-lg
     two-column
+    overflow-auto
   "
 >
   ${ header }
   <aside
     class="
-      p1
-    "
+     col-start-1
+     col-end-2
+     overflow-auto
+   "
   >
     ${ aside }
   </aside>
   <main
     class="
-      h-full
       col-start-2
-      p1
       overflow-auto
     "
   >

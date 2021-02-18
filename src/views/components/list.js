@@ -49,48 +49,12 @@ export default function List(state={ notes: [] }) {
   }).join('')
 
   return `
-<div
- class="
-  h-full
-  flex
-  flex-col
- "
+<ul
+  class="
+    list-none
+  "
 >
-  <ul
-    class="
-      list-none
-      flex-grow
-    "
-  >
-    ${ items }
-  </ul>
-  <div>
-    <a
-      class="
-       text-center
-       block
-       pt-1
-       pr2
-       pb-1
-       pl2
-       text0
-       text-g9
-       font-bold
-       border-solid
-       border1
-       border-g8
-       border-h0
-       border-a2
-       radius0
-       bg-p0
-       cursor-pointer
-       no-underline
-      "
-      href="/notes"
-    >
-      Add note
-    </a>
-  </div>
-</div>
+  ${ items }
+</ul>
     `
 }
