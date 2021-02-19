@@ -11,8 +11,8 @@ export default function List(state={ notes: [] }) {
         border-solid
         border1
         border-g8
-        border-h1
-        border-a2
+        border-h0
+        border-a0
         radius0
         bg-g9
         cursor-pointer
