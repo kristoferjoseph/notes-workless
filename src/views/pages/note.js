@@ -33,31 +33,21 @@ export default function Notes(state={}) {
     return `
 <div
   class="
+    w-full
     h-full
-    flex
-    flex-col
-    m-auto
     pt0
     pr1
     pb2
     pl1
   "
 >
-    <div
-      class="
-        flex
-        flex-grow
-        w-full
-      "
-    >
-    ${
-      NoteForm({
-        cursor,
-        edit,
-        legend: 'Update note'
-      })
-    }
-    </div>
+  ${
+    NoteForm({
+      cursor,
+      edit,
+      legend: 'Update note'
+    })
+  }
 </div>
     `
   }

@@ -12,8 +12,7 @@ export default function Notes(state={}) {
     url
   } = account
 
-  let list = notes.length
-    ? `
+  let list = `
 <div
  class="
   flex
@@ -21,10 +20,9 @@ export default function Notes(state={}) {
   p1
  "
 >
- ${List(state)}
+ ${notes.length ? List(state) : Empty()}
 </div>
   `
-   : Empty()
 
   return `
 ${
@@ -40,7 +38,10 @@ TwoColumn({
    class="
     w-full
     h-full
-    p1
+    pt0
+    pr1
+    pb2
+    pl1
   "
 >
   ${NoteForm()}

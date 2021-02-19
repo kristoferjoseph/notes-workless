@@ -7,6 +7,7 @@ export default function TwoColumn(state={}) {
     h-full
     grid-lg
     two-row
+    fifty-fifty
   "
 >
   <header

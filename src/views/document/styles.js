@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.fifty-fifty {
+  grid-template-columns: 1fr 1fr;
+}
+
 .two-row {
   grid-template-rows: 0.1fr 1fr;
 }
